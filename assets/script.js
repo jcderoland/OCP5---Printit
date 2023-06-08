@@ -18,7 +18,7 @@ const slides = [
   },
 ];
 
-// Ajout Event Listener sur Arrows
+// Add Event Listener on Arrows
 
 const arrow_left = document.getElementById("arrow_left");
 arrow_left.addEventListener("click", () => {
@@ -30,7 +30,7 @@ arrow_right.addEventListener("click", () => {
   console.log("J'ai cliqué sur le bouton droit");
 });
 
-// Ajout 1 bullet points par slide (4 au total)
+// Add 1 bullet point per slide (total of 4)
 
 const dots = document.querySelector(".dots");
 
@@ -41,13 +41,13 @@ for (let i = 0; i < slides.length; i++) {
   dots.appendChild(dot);
 }
 
-// Différencier point de slide en cours de visionnage
-// (C'est la 1ère)
+// Differentiate currently viewed slide dot
+// (It is the 1st one)
 
 let dot_selected = document.querySelector(".dot-0");
 dot_selected.classList.add("dot_selected");
 
-// Modifiez image au clic sur flèche droite
+// Modify image, tagline and dot selected when clicking on right arrow
 
 const bannerImg = document.querySelector(".banner-img");
 const bannerTag = document.querySelector(".banner-tag");
@@ -69,7 +69,7 @@ arrow_right.addEventListener("click", () => {
   dot_selected.classList.add("dot_selected");
 });
 
-// Modifiez image au clic sur flèche gauche
+// Modify image, tagline and dot selected when clicking on left arrow
 
 arrow_left.addEventListener("click", () => {
   if (currentSlide === 0) {
